@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.scss';
 
-export function Navbar(props) {
+export function Navbar({ children }) {
     return (
         <header className='navbar-wrapper'>
             <div className='navbar-container'>
-                {props.children}
+                {children}
             </div>
         </header>
     )
@@ -21,19 +21,19 @@ export function NavBrand() {
     )
 }
 
-export function Nav(props) {
+export function Nav({ children }) {
     return(
         <div className="navbar-nav">
-            {props.children}
+            {children}
         </div>
     )
 }
 
-export function NavItem(props) {
+export function NavItem({ href, children, separator }) {
     return (
         <div className='navbar-item-container'>
-            <div className='navbar-item'><a href={props.href} >{props.children}</a></div>
-            {props.separator && <span className='navitem-separator'>|</span>}
+            <div className='navbar-item'><a href={href} >{children}</a></div>
+            {separator && <span className='navitem-separator'>|</span>}
         </div>
     )
 }
