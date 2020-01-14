@@ -5,10 +5,10 @@ import Footer from '../components/Footer';
 export default function  Page(props) {
     
     return(
-        <div>
+        <React.Fragment>
             <Header />
                 {props.children}
             <Footer />
-        </div>
+        </React.Fragment>
     )
 } 
