@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import { Controlled as CodeMirror } from "react-codemirror2";
+import React, { Component } from 'react';
+import { Controlled as CodeMirror } from 'react-codemirror2';
 import io from 'socket.io-client';
-import axios from "axios";
+import axios from 'axios';
 
-import "./App.css";
-import "codemirror/lib/codemirror.css";
-import "codemirror/theme/material.css";
+import './App.css';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/material.css';
 
-import "codemirror/mode/htmlmixed/htmlmixed";
-import "codemirror/mode/css/css";
-import "codemirror/mode/javascript/javascript";
+import 'codemirror/mode/htmlmixed/htmlmixed';
+import 'codemirror/mode/css/css';
+import 'codemirror/mode/javascript/javascript';
 
 const socket = io(process.env.REACT_APP_API_URL);
 
@@ -18,9 +18,9 @@ class App extends Component {
     super();
     this.state = {
       id: 1,
-      html: "",
-      css: "",
-      js: ""
+      html: '',
+      css: '',
+      js: '',
     };
   }
 
@@ -30,12 +30,12 @@ class App extends Component {
 
   componentDidMount() {
     socket.on('text-update', (data) => {
-//    const { id } = this.state;
-//    if (data.id === id) return;
+      //    const { id } = this.state;
+      //    if (data.id === id) return;
       this.setState({
         html: data.html,
         css: data.css,
-        js: data.js
+        js: data.js,
       });
     });
   }
@@ -51,7 +51,7 @@ class App extends Component {
   runCode = () => {
     const { html, css, js } = this.state;
 
-    const iframe = this.refs.iframe;
+    const { iframe } = this.refs;
     const document = iframe.contentDocument;
     const documentContents = `
       <!DOCTYPE html>
@@ -83,15 +83,15 @@ class App extends Component {
   render() {
     const { html, js, css } = this.state;
     const codeMirrorOptions = {
-      theme: "material",
+      theme: 'material',
       lineNumbers: true,
       scrollbarStyle: null,
-      lineWrapping: true
+      lineWrapping: true,
     };
 
     return (
       <div className="App">
-        <section className="playground" style={{width: "100%"}}>
+        <section className="playground" style={{ width: '100%' }}>
           {/* <div className="code-editor html-code">
             <div className="editor-header">HTML</div>
             <CodeMirror
@@ -118,13 +118,13 @@ class App extends Component {
               }}
             />
           </div> */}
-          <div className="code-editor js-code" style={{height: "100%"}}>
+          <div className="code-editor js-code" style={{ height: '100%' }}>
             <div className="editor-header">JavaScript</div>
             <CodeMirror
               value={js}
               options={{
-                mode: "javascript",
-                ...codeMirrorOptions
+                mode: 'javascript',
+                ...codeMirrorOptions,
               }}
               onBeforeChange={(editor, data, js) => {
                 this.setState({ js }, () => this.syncUpdates());

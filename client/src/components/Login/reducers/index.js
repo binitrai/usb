@@ -1,3 +1,3 @@
-import loginReducer from './reducers'
+import loginReducer from './reducers';
 
 export default loginReducer;

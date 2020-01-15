@@ -1,15 +1,14 @@
 import React from 'react';
-import Page from  './components/Page';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Page from './components/Page';
 import LoginContainer from './components/Login/LoginContainer';
-
-import {BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 export default function App() {
-  return(
+  return (
     <Router>
       <Route exact path="/">
-        <Page header={true} footer={true}>
+        <Page header footer>
           MainPage
         </Page>
       </Route>
@@ -18,6 +17,5 @@ export default function App() {
       <Route path="/support" component={LoginContainer} />
       <Route path="/trial" component={LoginContainer} />
     </Router>
-  )
+  );
 }
-
