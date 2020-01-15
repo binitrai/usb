@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "codemirror": "^5.49.2",
+    "eslint-config-airbnb": "^18.0.1",
     "react": "^16.12.0",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.12.0",
@@ -15,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint ./src  --ext .js",
+    "fixlint": "./node_modules/.bin/eslint ./src  --ext .js --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,5 +28,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-react": "^7.17.0"
+  }
 }
