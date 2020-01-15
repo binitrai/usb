@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from  './components/Page';
-import Login from '../src/components/Login';
+import LoginContainer from './components/Login/LoginContainer';
 
 import {BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -13,10 +13,10 @@ export default function App() {
           MainPage
         </Page>
       </Route>
-      <Route path="/login" component={Login} />
-      <Route path="/product" component={Login} />
-      <Route path="/support" component={Login} />
-      <Route path="/trial" component={Login} />
+      <Route path="/login" component={LoginContainer} />
+      <Route path="/product" component={LoginContainer} />
+      <Route path="/support" component={LoginContainer} />
+      <Route path="/trial" component={LoginContainer} />
     </Router>
   )
 }
