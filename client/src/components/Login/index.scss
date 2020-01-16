@@ -1,10 +1,41 @@
 .login-container {
     margin:20px auto 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 500px;
     width:400px;
-    border: solid 1px #000;
-    border-radius: 5px;
+    //border: solid 1px #000;
+    //border-radius: 5px;
+
+    .login-box {
+        border: solid 1px #eee;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    .login-text {
+        padding: 6px;
+        font-weight: 400;
+        font-size: 18px;
+        color: #555;
+        display: flex;
+        justify-content: center;
+    }
+
+    .or-line {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #e5e5e5; 
+        line-height: 0.1em;
+        margin: 30px auto;
+
+        span {
+            padding: 0 10px;
+            background: #fff;
+            font-size: 14px;
+            color:#555;
+        }
+    }
 }
