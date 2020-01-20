@@ -66,6 +66,13 @@
     .btn-item.right {
         margin-left: auto;
     }
+
+    .btn-item.full {
+        width: 100%;
+        button {
+            width: 100%;
+        }
+    }
 }
 
 .btn-item button {

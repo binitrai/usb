@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './index.scss';
 
 export function InputGroup({ children, direction }) {
@@ -25,9 +27,9 @@ export function ButtonGroup({ children, align }) {
     )
 }
 
-export function Button({ theme = "", type, children, onClick, push = "" }) {
+export function Button({ theme = "", width="", type, children, onClick, push = "" }) {
     return (
-        <div className={"btn-item "+push}>
+        <div className={"btn-item "+push+" "+width}>
             <button className={theme} type={type} onClick={onClick}>{children}</button>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Navbar, NavBrand, Nav, NavItem,
-} from '../Navbar';
+} from '../../lib/Navbar';
 
 export default function Header() {
   return (
