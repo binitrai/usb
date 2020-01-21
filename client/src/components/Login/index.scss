@@ -1,5 +1,5 @@
 .login-container {
-    margin:20px auto 0 auto;
+    margin:100px auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +36,12 @@
             background: #fff;
             font-size: 14px;
             color:#555;
+        }
+    }
+
+    .social-login-container {
+        img {
+            margin: 0 7px;
         }
     }
 }

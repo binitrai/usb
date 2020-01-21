@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
-import LoginComponent from './LoginComponent';
+import { bindActionCreators } from 'redux';
+import { updateLoader } from '../Loading/reducers';
+
+import { LoginComponent } from '.';
 
 
 const mapStateToProps = (state) => {
@@ -7,14 +10,11 @@ const mapStateToProps = (state) => {
   return { loginName };
 };
 
-const mapDispatchToProps = (state) => {
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  updateLoader,
+}, dispatch);
 
-};
-
-const LoginContainer = connect(
+export const LoginContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(LoginComponent);
-
-
-export default LoginContainer;
