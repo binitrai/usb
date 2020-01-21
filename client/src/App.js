@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Page from './components/Page';
 import { LoginContainer } from './components/Login';
-import SignupContainer from './components/Signup/SignupContainer';
+import { SignupContainer } from './components/Signup';
 
 
 export default function App() {
   return (
     <Router>
       <Route exact path="/">
-        <Page header footer>
+        <Page>
           MainPage
         </Page>
       </Route>

@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../Page';
 import {
-  InputGroup, Input, Button, InputLink, ButtonGroup,
+  InputGroup, 
+  Input, 
+  Button, 
+  InputLink, 
+  ButtonGroup,
 } from '../../lib/Input';
 import Instagram from '../../asset/images/instagram.png';
 import Google from '../../asset/images/google.png';
@@ -28,7 +32,7 @@ export function LoginComponent({ history, updateLoader }) {
   }
 
   return (
-    <Page header={false}>
+    <Page header={false} footer={false}>
       <div className="login-container">
         <div className="login-box">
           <div className="login-text">Welcome Back</div>

@@ -4,7 +4,7 @@ import Footer from '../Footer';
 import { LoadingContainer } from '../Loading';
 import './index.scss';
 
-export default function Page({ children, header, footer }) {
+export default function Page({ children, header=true, footer=true }) {
   return (
     <div className="page-container">
       {header && <Header />}

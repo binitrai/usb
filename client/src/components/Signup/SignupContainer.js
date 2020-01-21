@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SignupComponent from './SignupComponent';
+import { SignupComponent } from '.';
 
 
 const mapStateToProps = (state) => {
@@ -11,10 +11,7 @@ const mapDispatchToProps = (state) => {
 
 };
 
-const SignupContainer = connect(
+export const SignupContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(SignupComponent);
-
-
-export default SignupContainer;

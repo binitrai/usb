@@ -6,9 +6,9 @@ import {
 
 import '../Login/index.scss';
 
-function SignupComponent({ history }) {
+export function SignupComponent({ history }) {
   return (
-    <Page header={false}>
+    <Page header={false} footer={false}>
       <div className="login-container">
         <div className="login-box">
           <div className="login-text">Welcome! Let's get started</div>
@@ -31,5 +31,3 @@ function SignupComponent({ history }) {
     </Page>
   );
 }
-
-export default SignupComponent;
